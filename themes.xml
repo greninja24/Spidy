@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme (Dark) -->
+    <style name="Theme.SpiderBotController" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/neon_blue_primary</item>
+        <item name="colorPrimaryVariant">@color/neon_blue_primary_variant</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/neon_cyan_secondary</item>
+        <item name="colorSecondaryVariant">@color/neon_cyan_secondary_variant</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+        <!-- Background colors -->
+        <item name="android:windowBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@color/white</item>
+
+        <!-- Button colors -->
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="materialButtonStyle">@style/Widget.SpiderBot.Button.Dark</item>
+    </style>
+
+    <!-- Splash theme -->
+    <style name="Theme.SpiderBotController.Splash" parent="Theme.SpiderBotController">
+        <item name="android:windowBackground">@drawable/splash_background_dark</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- Voice control theme -->
+    <style name="Theme.SpiderBotController.Voice" parent="Theme.SpiderBotController">
+        <item name="android:windowBackground">@color/voice_background_dark</item>
+    </style>
+
+    <!-- Button style for dark theme -->
+    <style name="Widget.SpiderBot.Button.Dark" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="backgroundTint">@color/neon_blue_primary</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Control button style for dark theme -->
+    <style name="Widget.SpiderBot.ControlButton.Dark" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="backgroundTint">@color/neon_cyan_secondary</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Input field style for dark theme -->
+    <style name="Widget.SpiderBot.TextInputLayout.Dark" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/neon_blue_primary</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="android:textColorHint">@color/neon_cyan_secondary</item>
+    </style>
+</resources>

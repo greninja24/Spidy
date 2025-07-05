@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light theme colors -->
+    <color name="light_blue_primary">#E3F2FD</color>
+    <color name="light_blue_primary_variant">#BBDEFB</color>
+    <color name="light_blue_secondary">#2196F3</color>
+    <color name="light_blue_secondary_variant">#1976D2</color>
+    <color name="light_background">#FAFAFA</color>
+    <color name="light_surface">#FFFFFF</color>
+
+    <!-- Dark theme colors (Neon) -->
+    <color name="neon_blue_primary">#00E5FF</color>
+    <color name="neon_blue_primary_variant">#00B8D4</color>
+    <color name="neon_cyan_secondary">#1DE9B6</color>
+    <color name="neon_cyan_secondary_variant">#00BCD4</color>
+    <color name="dark_background">#121212</color>
+    <color name="dark_surface">#1E1E1E</color>
+
+    <!-- Voice control backgrounds -->
+    <color name="voice_background">#F3E5F5</color>
+    <color name="voice_background_dark">#2E1065</color>
+
+    <!-- Common colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#9E9E9E</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="dark_gray">#424242</color>
+
+    <!-- Status colors -->
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="error_red">#F44336</color>
+
+    <!-- Transparent colors -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_black">#80000000</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
+</resources>

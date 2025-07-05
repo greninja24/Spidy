@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SpiderBot Controller</string>
+
+    <!-- Connection Screen -->
+    <string name="connect_to_spiderbot">Connect to SpiderBot</string>
+    <string name="connection_instructions">Follow these steps to connect:</string>
+    <string name="step_1">1. Connect your phone to the Wi-Fi hotspot "SpiderBot_000"</string>
+    <string name="step_2">2. Return to the app and enter your Home Wi-Fi SSID &amp; Password</string>
+    <string name="step_3">3. Tap "Send Credentials" (sends SSID/password to the bot)</string>
+    <string name="step_4">4. Then connect your phone and bot to the same Wi-Fi</string>
+    <string name="step_5">5. Enter the IP address shown on the bot\'s screen</string>
+
+    <string name="wifi_ssid">Home Wi-Fi SSID</string>
+    <string name="wifi_password">Wi-Fi Password</string>
+    <string name="bot_ip_address">Bot IP Address</string>
+    <string name="send_credentials">Send Credentials</string>
+    <string name="connect_to_bot">Connect to Bot</string>
+
+    <!-- Controller Screen -->
+    <string name="up">UP</string>
+    <string name="down">DOWN</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="voice_control">Voice Control</string>
+
+    <!-- Voice Control Screen -->
+    <string name="voice_control_active">Voice Control Active</string>
+    <string name="listening">Listening...</string>
+    <string name="tap_to_speak">Tap to speak</string>
+    <string name="back_to_controller">Back to Controller</string>
+    <string name="voice_command_hint">Say commands like "move forward", "turn left", "stop"</string>
+
+    <!-- Status Messages -->
+    <string name="connecting">Connecting...</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="connection_failed">Connection Failed</string>
+    <string name="sending_credentials">Sending credentials...</string>
+    <string name="credentials_sent">Credentials sent successfully</string>
+    <string name="credentials_failed">Failed to send credentials</string>
+
+    <!-- Error Messages -->
+    <string name="error_invalid_ip">Please enter a valid IP address</string>
+    <string name="error_empty_fields">Please fill in all fields</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_permission_denied">Permission denied. Please grant required permissions.</string>
+    <string name="error_voice_not_available">Voice recognition not available</string>
+
+    <!-- Permissions -->
+    <string name="permission_microphone">Microphone permission is required for voice control</string>
+    <string name="permission_network">Network permission is required to connect to SpiderBot</string>
+</resources>

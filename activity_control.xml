@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/android:windowBackground"
+    tools:context=".ControllerActivity">
+
+    <!-- Status Bar -->
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@drawable/status_bar_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/connection_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/connected"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/success_green"
+            android:drawableStart="@drawable/ic_wifi_connected"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/bot_ip_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="192.168.1.100"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:alpha="0.7" />
+
+    </LinearLayout>
+
+    <!-- Voice Control Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/voice_control_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_mic"
+        android:contentDescription="@string/voice_control"
+        app:backgroundTint="?attr/colorSecondary"
+        app:tint="?attr/colorOnSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Left Control Panel -->
+    <LinearLayout
+        android:id="@+id/left_control_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/up_button"
+            style="@style/Widget.SpiderBot.ControlButton"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/up"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/ic_arrow_up"
+            android:drawablePadding="8dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/down_button"
+            style="@style/Widget.SpiderBot.ControlButton"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="@string/down"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/ic_arrow_down"
+            android:drawablePadding="8dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary" />
+
+    </LinearLayout>
+
+    <!-- Right Control Panel -->
+    <LinearLayout
+        android:id="@+id/right_control_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/left_button"
+            style="@style/Widget.SpiderBot.ControlButton"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/left"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/ic_arrow_left"
+            android:drawablePadding="8dp"
+            android:backgroundTint="?attr/colorSecondary"
+            android:textColor="?attr/colorOnSecondary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/right_button"
+            style="@style/Widget.SpiderBot.ControlButton"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="@string/right"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/ic_arrow_right"
+            android:drawablePadding="8dp"
+            android:backgroundTint="?attr/colorSecondary"
+            android:textColor="?attr/colorOnSecondary" />
+
+    </LinearLayout>
+
+    <!-- Disconnect Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/disconnect_button"
+        style="@style/Widget.SpiderBot.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/disconnect"
+        android:textSize="14sp"
+        android:backgroundTint="@color/error_red"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Command Feedback -->
+    <TextView
+        android:id="@+id/command_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
+        android:alpha="0.8"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/disconnect_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

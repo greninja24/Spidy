@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/android:windowBackground"
+    tools:context=".VoiceControlActivity">
+
+    <!-- Voice Control Icon -->
+    <ImageView
+        android:id="@+id/voice_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_voice_large"
+        android:contentDescription="@string/voice_control"
+        android:background="@drawable/voice_icon_background"
+        android:padding="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Voice Status -->
+    <TextView
+        android:id="@+id/voice_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/voice_control_active"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintTop_toBottomOf="@+id/voice_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Voice Command Display -->
+    <TextView
+        android:id="@+id/voice_command_display"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/listening"
+        android:textSize="18sp"
+        android:textColor="?attr/colorOnSurface"
+        android:textAlignment="center"
+        android:padding="16dp"
+        android:background="@drawable/voice_command_background"
+        android:alpha="0.8"
+        app:layout_constraintTop_toBottomOf="@+id/voice_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Voice Hint -->
+    <TextView
+        android:id="@+id/voice_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/voice_command_hint"
+        android:textSize="14sp"
+        android:textColor="?attr/colorOnSurface"
+        android:textAlignment="center"
+        android:alpha="0.6"
+        app:layout_constraintTop_toBottomOf="@+id/voice_command_display"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Voice Recording Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/voice_record_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_mic_recording"
+        android:contentDescription="@string/tap_to_speak"
+        app:backgroundTint="?attr/colorSecondary"
+        app:tint="?attr/colorOnSecondary"
+        app:fabSize="normal"
+        app:layout_constraintTop_toBottomOf="@+id/voice_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Voice Recording Indicator -->
+    <View
+        android:id="@+id/voice_recording_indicator"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/voice_recording_pulse"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/voice_record_fab"
+        app:layout_constraintBottom_toBottomOf="@+id/voice_record_fab"
+        app:layout_constraintStart_toStartOf="@+id/voice_record_fab"
+        app:layout_constraintEnd_toEndOf="@+id/voice_record_fab" />
+
+    <!-- Back Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_button"
+        style="@style/Widget.SpiderBot.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/back_to_controller"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_arrow_back"
+        android:drawablePadding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Connection Status -->
+    <TextView
+        android:id="@+id/connection_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/connected"
+        android:textSize="14sp"
+        android:textColor="@color/success_green"
+        android:drawableStart="@drawable/ic_wifi_connected"
+        android:drawablePadding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
